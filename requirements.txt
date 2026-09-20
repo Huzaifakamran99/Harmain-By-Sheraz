@@ -1,0 +1,28 @@
+# ---------------------------------------------------------------- core
+PyQt6>=6.6
+reportlab>=4.0
+Pillow>=10.0
+certifi>=2024.0
+
+# ----------------------------------------------- document reading (OCR)
+# PyMuPDF renders PDF pages to images with NO external program required,
+# and also reads a PDF's text layer. Installing it is what makes scanned
+# PDF visas work.
+PyMuPDF>=1.24
+# pdfplumber reads the text layer of digital visas/permits (Saudi e-visa,
+# Nusuk printouts). These need no OCR engine at all.
+pdfplumber>=0.11
+pypdf>=4.0
+# pytesseract is the Python wrapper. It also needs the separate Tesseract
+# OCR PROGRAM installed on the computer - see the README ("Installing
+# Tesseract"). Photos and scans need it; digital PDFs do not.
+pytesseract>=0.3.10
+
+# ---------------------------------------------------------- packaging
+pyinstaller>=6.0
+
+# ------------------------------------------------------------ optional
+# Only needed if you prefer Poppler-based PDF rasterising over PyMuPDF:
+# pdf2image>=1.16
+# Pure-Python OCR fallback (large download, slower, no Tesseract needed):
+# easyocr>=1.7
