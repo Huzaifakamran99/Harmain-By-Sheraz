@@ -1,28 +1,41 @@
-# ---------------------------------------------------------------- core
-PyQt6>=6.6
-reportlab>=4.0
-Pillow>=10.0
-certifi>=2024.0
-
-# ----------------------------------------------- document reading (OCR)
-# PyMuPDF renders PDF pages to images with NO external program required,
-# and also reads a PDF's text layer. Installing it is what makes scanned
-# PDF visas work.
-PyMuPDF>=1.24
-# pdfplumber reads the text layer of digital visas/permits (Saudi e-visa,
-# Nusuk printouts). These need no OCR engine at all.
-pdfplumber>=0.11
-pypdf>=4.0
-# pytesseract is the Python wrapper. It also needs the separate Tesseract
-# OCR PROGRAM installed on the computer - see the README ("Installing
-# Tesseract"). Photos and scans need it; digital PDFs do not.
-pytesseract>=0.3.10
-
-# ---------------------------------------------------------- packaging
-pyinstaller>=6.0
-
-# ------------------------------------------------------------ optional
-# Only needed if you prefer Poppler-based PDF rasterising over PyMuPDF:
-# pdf2image>=1.16
-# Pure-Python OCR fallback (large download, slower, no Tesseract needed):
-# easyocr>=1.7
+altgraph==0.17.5
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anyio==4.15.1
+blinker==1.9.0
+certifi==2026.7.22
+cffi==2.1.1
+charset-normalizer==3.5.1
+click==8.5.0
+cryptography==50.0.1
+fastapi==0.141.1
+Flask==3.1.3
+h11==0.16.0
+idna==3.20
+itsdangerous==2.2.0
+Jinja2==3.1.6
+macholib==1.16.4
+MarkupSafe==3.0.3
+packaging==26.3
+pdfminer.six==20260107
+pdfplumber==0.11.10
+pillow==12.3.0
+pycparser==3.0
+pydantic==2.13.5
+pydantic_core==2.46.5
+pyinstaller==6.22.3
+pyinstaller-hooks-contrib==2026.7
+pymupdf==1.28.2
+pypdf==6.19.0
+pypdfium2==5.13.0
+PyQt6==6.11.0
+PyQt6-Qt6==6.11.2
+PyQt6_sip==13.12.0
+pytesseract==0.3.13
+reportlab==5.0.1
+setuptools==84.0.0
+starlette==1.6.0
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+uvicorn==0.53.0
+Werkzeug==3.1.8
